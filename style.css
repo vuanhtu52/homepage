@@ -21,12 +21,16 @@ header {
 }
 
 header .background {
-    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    background-color: #38bdf8;
+    z-index: -100;
 }
 
 header > .background, .introduction {
     grid-row-start: 1;
     grid-column-start: 1;
+    margin-bottom: 20px;
 }
 
 header .introduction {
@@ -39,8 +43,6 @@ header .introduction .profile-picture {
     background-image: url("assets/images/portrait.jpg");
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 300px;
     float: left;
     position: relative;
     top: -20px;
@@ -89,20 +91,89 @@ header .introduction .about-me .links img {
 }
 
 @media (min-width: 1000px) {
-    h2 {
-        color: green;
+    header .background {
+        height: 100%;
+        transform: skewY(-5deg);
     }
+
+    header .introduction .profile-picture {
+        width: 300px;
+        height: 300px;
+    }  
 }
 
-@media (max-width: 999px) {
-    h2 {
-        color: yellow;
+@media (min-width: 501px) and (max-width: 999px) {
+    header .background {
+        height: 70%;
+        transform: skewY(-10deg);
+    }
+    
+    header .introduction {
+        margin-top: 120px;
+    }
+
+    header .introduction .profile-picture {
+        top: -70px;
+        width: 250px;
+        height: 250px;
+        margin-bottom: -50px;
+    }
+
+    header .introduction .profile-picture div {
+        top: 10px;
+        left: 200px;
+    }
+
+    header .introduction .about-me h2 {
+        text-align: center;
     }
 }
 
 @media (max-width: 500px) {
-    h2 {
-        color: red;
+    header .background {
+        height: 30%;
+        transform: skewY(-10deg);
+    }
+
+    header .introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header .introduction .profile-picture {
+        width: 250px;
+        height: 300px;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 300px;
+        min-width: 200px;
+        width: calc(100vw - 20px);
+    } 
+
+    header .introduction .profile-picture div {
+        font-size: 40px;
+        max-width: 300px;
+        min-width: 200px;
+        width: calc(100vw - 20px);
+        bottom: 0;
+    }
+
+    header .introduction .about-me {
+        position: static;
+    }
+
+    header .introduction .about-me h2 {
+        text-align: center;
     }
 }
 
