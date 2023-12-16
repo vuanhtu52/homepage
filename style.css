@@ -1,0 +1,108 @@
+* {
+    /* Fix issue with extra space on the side when adding padding */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serifs;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header .background {
+    width: 100%;
+}
+
+header > .background, .introduction {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+header .introduction {
+    margin-left: 70px;
+    margin-right: 50px;
+    margin-top: 70px;
+}
+
+header .introduction .profile-picture {
+    background-image: url("assets/images/portrait.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    float: left;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+header .introduction .profile-picture div {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 300px;
+    font-size: 40px;
+    text-align: center;
+}
+
+header .introduction .about-me {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+header .introduction .about-me h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 300;
+}
+
+header .introduction .about-me p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+header .introduction .about-me .links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header .introduction .about-me .links a {
+    text-decoration: none;
+}
+
+header .introduction .about-me .links img {
+    width: 20px;
+}
+
+@media (min-width: 1000px) {
+    h2 {
+        color: green;
+    }
+}
+
+@media (max-width: 999px) {
+    h2 {
+        color: yellow;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        color: red;
+    }
+}
+
