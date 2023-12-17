@@ -23,7 +23,7 @@ header {
 header .background {
     height: 100%;
     transform-origin: left;
-    background-color: #38bdf8;
+    background-color: #0e7490;
     z-index: -100;
 }
 
@@ -157,6 +157,60 @@ main .card .detail p {
     color: grey;
 }
 
+footer {
+    padding: 50px;
+    background-color: #0e7490;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .contact p {
+    font-weight: 300;
+}
+
+footer .contact h2 {
+    font-family: "Playfair Display", sans-serif;
+}
+
+footer .contact .phone {
+    display: flex;
+    gap: 10px;
+}
+
+footer .contact .email {
+    display: flex;
+    gap: 10px;
+}
+
+footer .contact .links {
+    display: flex;
+    gap: 20px;
+}
+
+footer div > img {
+    width: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a > img {
+    width: 30px;
+}
+
+footer .footer-image {
+    background-image: url("assets/images/footer-image.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 300px;
+}
+
 @media (min-width: 1000px) {
     header .background {
         height: 100%;
@@ -193,6 +247,10 @@ main .card .detail p {
 
     header .introduction .about-me h2 {
         text-align: center;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
 
@@ -241,6 +299,27 @@ main .card .detail p {
 
     header .introduction .about-me h2 {
         text-align: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    footer .contact h2 {
+        text-align: center;
+    }
+
+    footer .phone > img, footer .email > img {
+        display: none;
+    }
+
+    footer .contact .links {
+        justify-content: center;
     }
 }
 
