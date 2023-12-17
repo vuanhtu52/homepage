@@ -90,6 +90,73 @@ header .introduction .about-me .links img {
     width: 20px;
 }
 
+main {
+    padding: 50px;
+}
+
+main > h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 300;
+}
+
+main .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+main .card-wrapper .card {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid grey;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+main .card .thumbnail {
+    font-size: 30px;
+    font-family: "Playfair Display", sans-serif;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+main .card .detail {
+    padding: 20px 20px 50px 20px;
+}
+
+main .card .detail .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .card .detail .header .title {
+    font-size: 18px;
+    font-family: "Playfair Display", sans-serif;
+}
+
+main .card .detail .header .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .card .detail .header .links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .card img {
+    width: 20px;
+}
+
+main .card .detail p {
+    color: grey;
+}
+
 @media (min-width: 1000px) {
     header .background {
         height: 100%;
